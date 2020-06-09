@@ -9,12 +9,12 @@ import { BookrequestDetailService } from './../shared/bookrequest-detail.service
 })
 export class BookdetailGuard implements CanActivate {
 
-  constructor(private router: Router, private toastr: ToastrService, private servie: BookrequestDetailService) {
+  constructor(private router: Router, private toastr: ToastrService, private service: BookrequestDetailService) {
   }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-    if(localStorage.getItem('token') != null && this.servie.detail != null)
+    if(localStorage.getItem('token') != null && this.service.detail != null)
     {
       return true;
     }

@@ -8,11 +8,14 @@ import { TokenAuthGuard } from './auth/token-auth.guard';
 import { SuperadminGuard } from './auth/superadmin.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { TokenNullGuard } from './auth/token-null.guard';
-import {BookdetailGuard} from './auth/bookdetail.guard';
+import { BookdetailGuard } from './auth/bookdetail.guard';
+import { LibraryuserdetailGuard } from './auth/libraryuserdetail.guard';
 import {BookrequestDetailComponent} from './bookrequest-details/bookrequest-detail/bookrequest-detail.component'
 import {BookrequestDetailsComponent} from './bookrequest-details/bookrequest-details.component';
 import {AdministratorDetailsComponent} from './administrator-details/administrator-details.component';
-import { BookDetailsComponent } from './book-details/book-details.component'
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { LibraryuserDetailsComponent } from './libraryuser-details/libraryuser-details.component'
+import { LibraryuserDetailComponent } from './libraryuser-details/libraryuser-detail/libraryuser-detail.component'
 
 const routes: Routes = [
   {path: "", component: HomeComponent, pathMatch: "full"},
@@ -23,7 +26,9 @@ const routes: Routes = [
   {path: "bookrequest-details", component: BookrequestDetailsComponent, canActivate:[TokenAuthGuard]},
   {path: "administrator-details", component: AdministratorDetailsComponent, canActivate:[SuperadminGuard]},
   {path: "bookrequest-detail", component: BookrequestDetailComponent, canActivate:[BookdetailGuard]},
-  {path: "book-details", component: BookDetailsComponent, canActivate:[TokenAuthGuard]}
+  {path: "book-details", component: BookDetailsComponent, canActivate:[TokenAuthGuard]},
+  {path: "libraryuser-details", component: LibraryuserDetailsComponent, canActivate:[SuperadminGuard]},
+  {path: "libraryuser-detail", component: LibraryuserDetailComponent, canActivate:[LibraryuserdetailGuard]}
 ];
 
 @NgModule({

@@ -20,6 +20,7 @@ import { PublisherDetailListComponent } from './publisher-details/publisher-deta
 import { PublisherDetailService } from './shared/publisher-detail.service';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './shared/login.service';
+import { LibraryuserDetailService } from './shared/libraryuser-detail.service';
 import { LogoutComponent } from './logout/logout.component';
 import { TokenInterceptor } from './auth/token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +35,8 @@ import { BookrequestDetailComponent } from './bookrequest-details/bookrequest-de
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookDetailComponent } from './book-details/book-detail/book-detail.component';
 import { BookDetailListComponent } from './book-details/book-detail-list/book-detail-list.component';
+import { LibraryuserDetailsComponent } from './libraryuser-details/libraryuser-details.component';
+import { LibraryuserDetailComponent } from './libraryuser-details/libraryuser-detail/libraryuser-detail.component';
 
 
 
@@ -59,6 +62,8 @@ import { BookDetailListComponent } from './book-details/book-detail-list/book-de
     BookDetailsComponent,
     BookDetailComponent,
     BookDetailListComponent,
+    LibraryuserDetailsComponent,
+    LibraryuserDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +82,7 @@ import { BookDetailListComponent } from './book-details/book-detail-list/book-de
     multi: true
   },
   AdministratorDetailService,
+  LibraryuserDetailService,
   BookrequestDetailService,
   BookDetailService,
    LoginService],
