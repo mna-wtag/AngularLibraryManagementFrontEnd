@@ -16,6 +16,8 @@ import {AdministratorDetailsComponent} from './administrator-details/administrat
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { LibraryuserDetailsComponent } from './libraryuser-details/libraryuser-details.component'
 import { LibraryuserDetailComponent } from './libraryuser-details/libraryuser-detail/libraryuser-detail.component'
+import { LibraryUserRequestDetailsComponent } from './library-user-request-details/library-user-request-details.component';
+import { LibraryUserRequestGuard } from './auth/libraryuserrequest.guard';
 
 const routes: Routes = [
   {path: "", component: HomeComponent, pathMatch: "full"},
@@ -26,6 +28,7 @@ const routes: Routes = [
   {path: "bookrequest-details", component: BookrequestDetailsComponent, canActivate:[TokenAuthGuard]},
   {path: "administrator-details", component: AdministratorDetailsComponent, canActivate:[SuperadminGuard]},
   {path: "bookrequest-detail", component: BookrequestDetailComponent, canActivate:[BookdetailGuard]},
+  {path: "library-user-request-details", component: LibraryUserRequestDetailsComponent, canActivate:[TokenAuthGuard]},
   {path: "book-details", component: BookDetailsComponent, canActivate:[TokenAuthGuard]},
   {path: "libraryuser-details", component: LibraryuserDetailsComponent, canActivate:[SuperadminGuard]},
   {path: "libraryuser-detail", component: LibraryuserDetailComponent, canActivate:[LibraryuserdetailGuard]}

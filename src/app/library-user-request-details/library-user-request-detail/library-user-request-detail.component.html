@@ -1,0 +1,43 @@
+<p>library-user-request-details works!</p>
+
+<div class="jumbotron">
+    <h1 class="display-3 text-center">User Request Detail</h1>
+    <hr>
+    <div class="row">
+        <div *ngIf="!service.detail">Loading...</div>
+       
+        <div class="col-md-5" >
+        <table class="table table-hoverng table-sm">
+            <tr>
+                <td>Request Id:</td><td>{{service.detail.RequestId}}</td>
+            </tr>
+            <tr>
+                UserRequestStatus: string;
+                <td>First Name:</td><td>{{service.detail.FirstName}}</td>
+            </tr>
+            <tr>
+                <td>NID No:</td><td>{{service.detail.NIDNo}}</td>
+            </tr>
+            <tr>
+                <td>Mobile No:</td><td>{{service.detail.MobileNo}}</td>
+            </tr>
+            <tr>
+                <td>Request Time:</td><td>{{service.detail.RequestTime}}</td>
+            </tr>
+            <tr>
+                <td *ngIf="service.detail.UserRequestStatus == 'New'">
+                    <!-- <i 
+                    class="fa fa-check fa-lg text-success" 
+                    (click)="onUpdate(service.detail.RequestId,1)"></i> -->
+                    <i>APPROVE, reject</i>
+                  </td>
+                  <td *ngIf="service.detail.UserRequestStatus == 'Approved'">
+                      <i>Approved</i>
+                  </td>
+                  <td *ngIf="service.detail.UserRequestStatus == 'Rejected'">
+                    <i>Rejected</i>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

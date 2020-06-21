@@ -37,6 +37,7 @@ import { BookDetailComponent } from './book-details/book-detail/book-detail.comp
 import { BookDetailListComponent } from './book-details/book-detail-list/book-detail-list.component';
 import { LibraryuserDetailsComponent } from './libraryuser-details/libraryuser-details.component';
 import { LibraryuserDetailComponent } from './libraryuser-details/libraryuser-detail/libraryuser-detail.component';
+import { LibraryUserRequestDetailsComponent } from './library-user-request-details/library-user-request-details.component';
 
 
 
@@ -64,6 +65,7 @@ import { LibraryuserDetailComponent } from './libraryuser-details/libraryuser-de
     BookDetailListComponent,
     LibraryuserDetailsComponent,
     LibraryuserDetailComponent,
+    LibraryUserRequestDetailsComponent,
   ],
   imports: [
     BrowserModule,

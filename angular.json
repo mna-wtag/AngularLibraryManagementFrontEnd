@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crudapp"
+    }
+  },
+  "defaultProject": "crudapp",
+  "cli": {
+    "analytics": "a0331b4f-61e6-4951-b6c8-901e8f712852"
+  }
 }
