@@ -7,8 +7,7 @@ import { RouterStateSnapshot, Router } from '@angular/router';
 @Component({
   selector: 'app-bookrequest-details',
   templateUrl: './bookrequest-details.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class BookrequestDetailsComponent implements OnInit {
 

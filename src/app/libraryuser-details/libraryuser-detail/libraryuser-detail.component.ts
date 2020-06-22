@@ -3,6 +3,7 @@ import { LibraryuserDetailService } from './../../shared/libraryuser-detail.serv
 import { ToastrService } from 'ngx-toastr';
 import { RouterStateSnapshot, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @Component({

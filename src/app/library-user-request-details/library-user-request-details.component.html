@@ -17,7 +17,7 @@
             <th></th>
           </tr>
           <tr *ngFor="let  userRequestDetail of service.list">
-            <td>{{ userRequestDetail.FirstName }}</td>
+            <td (click)="populateForm(userRequestDetail)">{{ userRequestDetail.FirstName }}</td>
             <td>{{ userRequestDetail.LastName }}</td>
             <td>{{ userRequestDetail.Nidno }}</td>
             <td>{{ userRequestDetail.Email }}</td>
