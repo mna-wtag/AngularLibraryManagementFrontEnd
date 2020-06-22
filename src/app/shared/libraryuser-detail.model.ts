@@ -14,6 +14,4 @@ export class LibraryuserDetail {
         AccountStatus: string;
         DateOfBirth: string;
         ActiveOn: string;
-        ApproverBy: number;
-        ApplicationId: number;
 }

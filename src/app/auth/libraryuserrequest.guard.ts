@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
-import { BookrequestDetailService } from './../shared/bookrequest-detail.service';
+import { LibraryUserRegistrationRequestDetailsService } from './../shared/library-user-registration-request-details.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BookdetailGuard implements CanActivate {
+export class LibraryUserRequestGuard implements CanActivate {
 
-  constructor(private router: Router, private toastr: ToastrService, private service: BookrequestDetailService) {
+  constructor(private router: Router, private toastr: ToastrService, private service: LibraryUserRegistrationRequestDetailsService) {
   }
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -20,7 +20,7 @@ export class BookdetailGuard implements CanActivate {
     }
     else
     {
-      this.router.navigate(['/bookrequest-details']);
+      this.router.navigate(['/library-user-request-details']);
       return false;
     }
   }
